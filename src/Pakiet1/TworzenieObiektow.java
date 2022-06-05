@@ -1,6 +1,5 @@
 package Pakiet1;
-
-class Worker {
+class Worker{
     private double salary;
     private String name;
     private String surname;
@@ -29,14 +28,17 @@ class Worker {
         this.surname=surname;
     }
 }
-
-public class TworzenieObiektow {
-    public static void main(String [] args){
-        Worker wor=new Worker();
+public class TworzenieObiektow{
+    public static void main(String[]args){
+        Worker wor=new Worker(1700,"Marcin","Taki");
         Worker wor2=new Worker(10000,"Michal","Francuz");
         wor2.setSalary(15000.15);
         wor2.setName("Michael");
         wor2.setSurname("French");
-        System.out.println(wor2.getSalary()+"\n"+wor2.getName()+"\n"+wor2.getSurname());
+        wor.setSalary(2000);
+        wor.setName("Marcin");
+        wor.setSurname("Taaki");
+        System.out.println(wor2.getSalary()+"\n"+wor2.getName()+"\n"+wor2.getSurname()+"\n");
+        System.out.println(wor.getSalary()+"\n"+wor.getName()+"\n"+wor.getSurname());
     }
 }
